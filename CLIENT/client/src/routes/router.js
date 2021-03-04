@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import homeAdmin from "../views/homeAdmin.vue";
+import homeUser from "../views/homeUser.vue";
 
 Vue.use(VueRouter);
 
@@ -17,6 +18,14 @@ export const routes = [
     meta: {
         requiresAuth: true
       }
+  },
+  {
+    path: "/homeUser",
+    name: "homeUser",
+    component: homeUser,
+    /*meta: {
+        requiresAuth: true
+      } */
   },
 
  /* {

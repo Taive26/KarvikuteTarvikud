@@ -51,10 +51,10 @@ export default {
         let token = response.data.token;
         localStorage.setItem("jwt", token);
 
-        const decoded = jwt.verify(token, process.envTOKEN_SECRET);
+        const decoded = jwt.verify(token, process.env.TOKEN_SECRET);
         req.userData = decoded;
         console.log(req.userData);
-        const userType = userType.userData;
+        const userType = req.userData.userType;
 
         if (token) {
           if (userType = "ADMIN") {
