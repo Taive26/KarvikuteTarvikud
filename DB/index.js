@@ -12,10 +12,10 @@ app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.get('/', (req, res, next, error) => {
+/*app.get('/', (req, res, next, error) => {
   if (error) res.status(500);
   res.send('Hakkama said!');
-});
+}); */
 
 app.use('/api', router);
 

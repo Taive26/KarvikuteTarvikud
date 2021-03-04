@@ -3,7 +3,7 @@ module.exports = (req, res, next) => {
   try {
     const token = req.headers.authorization.replace("Bearer ", "");
     console.log(token);
-    const decoded = jwt.verify(token, process.envTOKEN_SECRET);
+    const decoded = jwt.verify(token, process.env.TOKEN_SECRET);
     req.userData = decoded;
     console.log(req.userData);
     next();
@@ -13,4 +13,3 @@ module.exports = (req, res, next) => {
     });
   }
 };
-
